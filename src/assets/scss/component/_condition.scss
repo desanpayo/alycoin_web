@@ -1,0 +1,59 @@
+.condition {
+    margin-top: 6rem;
+    &-title {
+        font-size: 1.8rem;
+        color: var(--color-text-title);
+        font-family: var(--heading-font);
+        span {
+            font-family: var(--body-font);
+            position: relative;
+            top: 2px;
+            margin-left: .80rem;
+            font-weight: normal;
+            display: inline-block;
+            &::first-letter {
+                color: var(--color-secondary);
+            }
+        }
+    }
+    &-paragraph {
+        color: var(--color-text-paragraph);
+        margin-top: .80rem;
+        a {
+            color: var(--color-text-title);
+            &:hover {
+                color: var(--color-secondary);
+                text-decoration: underline;
+            }    
+        }
+    }
+    &-subtitle {
+        margin-top: 1rem;
+        color: var(--color-text-title);
+        font-size: 1.5rem;
+    }
+    &-subtitle-diff {
+        margin-top: 1rem;
+        font-weight: 600;
+        color: var(--color-text-title);
+        font-size: 1.3rem;
+    }
+    @include responsive(small) {
+        & {
+            margin-top: 4rem;
+        }
+        &-title {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        &-paragraph {
+            margin-top: .65rem;
+        }
+        &-subtitle {
+            font-size: 1.4rem;
+        }
+        &-subtitle-diff {
+            font-size: 1.2rem;
+        }
+    }
+}

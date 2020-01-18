@@ -1,0 +1,64 @@
+:root {
+    --color-main: rgb(9, 11, 39);
+    --color-main-dark: #070122;
+    --color-secondary: #3F93F7;
+    --color-body : linear-gradient(70deg, rgb(9, 11, 39) 0%, rgb(9, 11, 39) 25%, #070122 35%, #070122 65%, rgb(9, 11, 39) 75%, rgb(9, 11, 39) 100%);
+    --color-text-title: rgb(196, 196, 196);
+    --color-text-paragraph: rgba(252,252,252,.6);
+    --color-border: #DFE0E0;
+    --color-logo: #818287;
+
+    --h1-font-size: 5rem;
+    --h2-font-size: 3.5rem;
+    --h3-font-size: 1.25rem;
+    --small-font-size: 0.875rem;
+    --font-size-logo: 2rem;
+
+    --body-font: 'Open Sans', sans-serif;
+    --heading-font: 'Matura MT Script Capitals', sans-serif;
+
+    --header-height: 4rem;
+    --logo-height: 500px;
+    --slider-height: 100vh;
+    --padding-left: 6rem;
+    --padding-right: 6rem;
+
+    --top: 200px;
+
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-fidex-x: 101;
+    --z-modal: 1000;
+}
+
+
+    $color-main: #0C0E28;
+    $color-main-dark: #0c062c;
+    $color-secondary: #3F93F7;
+    $color-text-title: rgb(196, 196, 196);
+    $color-text-paragraph: rgba(252,252,252,.6);
+    $color-border: #DFE0E0;
+    $color-logo: #818287;
+
+    $h2-font-size: 1.75rem;
+    $h3-font-size: 1.25rem;
+    $small-font-size: 0.875rem;
+
+    $header-height: 4rem;
+
+    $z-back: -10;
+    $z-normal: 1;
+    $z-tooltip: 10;
+    $z-fixed: 100;
+    $z-modal: 1000;
+
+    $breakpoints: (
+        small: 360px,
+        medium: 640px,
+        large: 850px,
+        xlarge: 1024px,
+        xxlarge: 1240px,
+        xxxlarge: 1440px
+    );

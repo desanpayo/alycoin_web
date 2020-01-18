@@ -1,0 +1,289 @@
+.l-header {
+    height: var(--header-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: var(--z-fixed);
+    background-color: var(--color-main);
+    @include responsive (medium) {
+        --header-height: 3rem;
+    }
+}
+
+.l-slider {
+    position: relative;
+    height: var(--slider-height);
+    overflow: hidden;
+
+    @include responsive (990px) {
+        --slider-height: 650px;
+    }
+    @include responsive (medium) {
+        --slider-height: 550px;
+    }
+}
+
+
+.l-fixebar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 2rem;
+    background-color: var(--color-main); 
+    padding-left: 100%;
+    box-sizing: content-box;
+}
+
+.l-question {
+    padding: 2rem 0;
+    @include responsive (medium) {
+        padding: 1.5rem 0;
+    }
+    @include responsive (small) {
+        background-color: #0C0E28;
+    }
+}
+
+.l-ecosystem {
+    position: relative;
+}
+
+.l-carousel {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+.l-video {
+    background: var(--color-body);
+    position: relative;
+    &::before {
+        content: "";
+        background: url(../img/img-effect-1.png) no-repeat left;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .02;
+    }
+}
+
+.l-blockchain {
+    position: relative;
+    &::before {
+        content: "";
+        background: url(../img/img-effect-parallax-2.png) no-repeat right;
+        display: inline-block;
+        position: absolute;
+        z-index: var(--z-back);
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    @include responsive (small) {
+        &::before {
+            left: 60%;
+        }
+    }
+}
+
+.l-whitepaper {
+    margin-top: 4rem;
+    background-color: var(--color-main);
+    padding: 4rem 0;
+    position: relative;
+    &::before {
+        content: "";
+        background-image: url(../img/img-effect-1.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: .02;
+    }
+    @include responsive (medium) {
+        padding: 1.5rem 0;
+    }
+    @include responsive(small) {
+        background: none;   
+    }
+}
+
+.l-pay {
+    background-color: var(--color-main);
+    padding: 1rem 0;
+    position: relative;
+    width: 100%;
+    &::before {
+        content: "";
+        background-image: url(../img/img-effect-2.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: .02;
+    }
+}
+
+.l-travel {
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.l-phone {
+    margin-top: 4rem;
+    background-color: var(--color-main);
+    padding: 2rem 0;
+    @include responsive (medium) {
+        padding: 1.5rem 0;
+    }
+    @include responsive(small) {
+        background: none;   
+        margin-top: 0;
+    }
+}
+
+.l-footer {
+    background: url(../img/img-footer.png) no-repeat center top;
+    position: relative;
+    z-index: var(--z-tooltip);
+}
+
+.l-services {
+    position: relative;
+    &::before {
+        content: "";
+        background: url(../img/img-effect-parallax-2.png) no-repeat right;
+        display: inline-block;
+        transform: rotateY(180deg);
+        position: absolute;
+        z-index: var(--z-back);
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    @include responsive (small) {
+        &::before {
+            left: 60%;
+        }
+    }
+}
+.l-navigation {
+    background-color: #040114;
+    height: var(--header-height);
+    position: fixed;
+    width: 100%;
+    top: var(--header-height);
+    left: 0;
+    z-index: var(--z-tooltip);
+    @include responsive (medium) {
+        --header-height: 3rem;
+    }
+}
+
+.l-notfound {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: var(--color-body);
+    z-index: var(--z-fixed);
+}
+
+.l-edit {
+    margin-top: 8rem;
+    @include responsive(medium) {
+        margin-top: 6rem;
+    }
+}
+
+.l-package {
+    margin-top: 10rem;
+    @include responsive(medium) {
+        margin-top: 7rem;
+    }
+}
+.l-order { 
+    margin-top: 8.5rem;
+    @include responsive(medium) {
+        margin-top: 6rem;
+    }
+}
+
+.l-ecommerce {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img {
+        align-self: flex-end;
+        position: absolute;
+        top: 50%;
+        // right: 0;
+    }
+    @include responsive(medium) {
+        & {
+            img {
+                height: 270px;
+                width: 250px;
+            }
+        }
+    }
+}
+.l-alypay {
+    margin-top: 6rem;
+    @include responsive(medium) {
+        margin-top: 4rem;
+    }
+}
+.l-alyexecutive {
+    height: 100vh;
+    width: 100%;
+}
+.l-alyfundation {
+    margin-top: 6rem;
+    @include responsive(medium) {
+        margin-top: 4rem;
+    }
+}
+
+.l-dashboard {
+    margin-top: 9rem;
+    @include responsive(medium) {
+        margin-top: 6.5rem;
+    }
+}
+.l-retirement {
+    margin-top: 9rem;
+    @include responsive(medium) {
+        margin-top: 6rem;
+    }
+}
+
+.l-commission {
+    margin-top: 10rem;
+    @include responsive(medium) {
+        margin-top: 6rem;
+    }
+}
+
+.l-admin {
+    margin-top: 9rem;
+    @include responsive(medium) {
+        margin-top: 6rem;
+    }
+}

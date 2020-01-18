@@ -1,0 +1,21 @@
+.commission {
+    &-title {
+        font-size: 2rem;
+        color: var(--color-text-title);
+        text-align: center;
+        &::first-letter {
+            color: var(--color-secondary);
+        }
+    }
+    @include responsive(medium) {
+        &-title {
+            margin-top: 7rem;
+            font-size: 1.7rem;
+        }
+    }
+    @include responsive(small) {
+        &-title {
+            font-size: 1.5rem;
+        }
+    }
+}

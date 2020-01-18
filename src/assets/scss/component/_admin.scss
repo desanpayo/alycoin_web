@@ -1,0 +1,13 @@
+ .admin {
+     &-button {
+        padding: .20rem 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: var(--color-secondary);
+        color: #fff;
+        &:hover {
+            background-color: var(--color-main-dark);
+            border: 1px solid var(--color-secondary);
+        }
+     }
+ }

@@ -1,0 +1,50 @@
+.question {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    position: relative;
+    justify-items: center;
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &-title {
+        font-size: var(--h2-font-size);
+        color: var(--color-text-title);
+        span {
+            display: inline-block;
+            font-family: var(--heading-font);
+            &::first-letter {
+                color: var(--color-secondary);
+            }
+        }
+    }
+    &-description {
+        margin-top: .40rem;
+        color: var(--color-text-paragraph);
+    }
+    &-logo {
+        width: 300px;
+        height: 270px;
+        overflow: hidden;
+        svg {
+            height: 100%;
+            width: 400px;
+            transform: scale(2.5)
+        }
+    }
+    @include responsive (xlarge) {
+        & {
+            text-align: center;
+            grid-template-columns: 100%;
+            grid-row-gap: 1rem;
+        }
+        &-logo {
+            position: absolute;
+            top: -15px;
+            opacity: .2;
+            height: 270px;
+        }
+    }
+}

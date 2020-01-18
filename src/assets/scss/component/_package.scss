@@ -1,0 +1,219 @@
+.package {
+    &-main {
+        background-color: #040114;
+        border-radius: 8px;
+        box-shadow: 0 0 2px var(--color-secondary);
+        padding: .60rem 3rem;
+    }
+    &-top {
+        border-bottom: 1px solid var(--color-secondary);
+        padding: 1rem 0;
+        width: 100%;
+    }
+    &-order {
+        font-weight: normal;
+        color: var(--color-text-title);
+    }
+
+    &-bottom {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    // card
+    &-card {
+        border: 1px solid var(--color-secondary);
+        padding: 1rem;
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: .03;
+            background: url(../img/img-effect-3.png) no-repeat;
+            background-position: right;
+        }
+    }
+    &-head {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 130px;
+        }
+    }
+    &-body {
+        text-align: center;
+        margin-top: .80rem;
+    }
+    &-name {
+        color: var(--color-text-title);
+        font-weight: normal;
+    }
+    &-content {
+        margin-top: .50rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        img {
+            width: 17px;
+        }
+    }
+    &-price {
+        color: var(--color-text-title);
+        margin-left: .50rem;
+    }
+    &-footer {
+        margin-top: 1rem;
+        border-top: 1px solid var(--color-secondary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 1rem 0 1rem;
+    }
+    &-button {
+        color: #fff;
+        cursor: pointer;
+        background-color: var(--color-main);
+        border-radius: 5px;
+        padding: 10px 25px;
+        display: inline-block;
+        font-size: 15px;
+        border: 1px solid var(--color-secondary);
+        transition: color .2s ease-in-out;
+        &:hover {
+            background: var(--color-main-dark);
+            color: var(--color-secondary);
+            transition: all .2s ease-in-out;
+        }
+        i {
+            margin-left: .50rem;
+        }
+    }
+
+    &-foot {
+        margin-top: 2rem;
+        padding: 2rem 0 1rem 0;
+        border-top: 1px solid var(--color-secondary);
+    }
+    &-group {
+        background-color: var(--color-main-dark);
+        padding: 8px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        border-radius: 4px;
+        position: relative;
+        width: 100%;
+        position: relative;
+    }
+    &-label {
+        color: var(--color-text-title);
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    &-select {
+        height: 30px;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        color: var(--color-secondary);
+        outline: none;
+    }
+    &-generate {
+        width: 100%;
+        padding: 1rem 0 0 0;
+    }
+    &-button-order {
+        width: 100%;
+        color: #fff;
+        cursor: pointer;
+        background-color: var(--color-main);
+        border-radius: 5px;
+        padding: 10px 25px;
+        display: inline-block;
+        font-size: 15px;
+        text-align: center;
+        border: 1px solid var(--color-secondary);
+        transition: color .2s ease-in-out;
+        &:hover {
+            background: var(--color-main-dark);
+            color: var(--color-secondary);
+            transition: all .2s ease-in-out;
+        }
+        i {
+            margin-left: .50rem;
+        }
+    }
+    @include responsive(1100px) {
+        &-bottom {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+        }
+    }
+    @include responsive(large) {
+        &-main {
+            padding: .60rem 1rem;
+        }
+        &-footer {
+            width: 100%;
+            padding: 1rem 0 0 0;
+        }
+        &-button {
+            width: 100%;
+            padding: 10px 23px;
+            i {
+                margin-left: .30rem;
+            }
+        }
+    }
+    @include responsive(medium) {
+        &-head {
+            img {
+                width: 100px;
+            }
+        }
+    }
+    @include responsive(500px) {
+        &-bottom {
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(9, 1fr);
+        }
+    }
+    @include responsive(small) {
+        &-order {
+            text-align: center;
+        }
+        &-main {
+            padding: .40rem;
+        }
+        &-top {
+            padding: 0 0 .20rem;
+        }
+        &-foot {
+            padding: .40rem 0 0 0;
+        }
+        &-generate {
+            padding: 0;
+        }
+    }
+    @include responsive(320px) {
+        &-order {
+            font-size: 16px;
+        }
+    }
+}
+
+.active {
+    background-color: var(--color-main);
+}

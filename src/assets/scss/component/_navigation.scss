@@ -1,0 +1,104 @@
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    &-list {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    &-item {
+        margin-right: 1.5rem;
+        transition: all .3s ease-in-out;
+        &:hover .navigation-link {
+            transition: all .3s ease-in-out;
+            color: var(--color-text-title);
+            transform: scale(1.2);
+        }
+    }
+    &-link {
+        text-transform: uppercase;
+        display: inline-block;
+        color: var(--color-secondary);
+        transition: all .3s ease-in-out;
+        font-size: 15px;
+    }
+    &-toggle {
+        display: none;
+    }
+
+    @include responsive(1200px) {
+        &-toggle {
+            color: var(--color-secondary);
+            font-size: 2rem;
+            cursor: pointer;
+            display: flex;
+            &:active {
+                color: #fff;
+            }
+        }
+        &-list {
+            background-color: #111028;
+            position: fixed;
+            top: 8rem;
+            right: -40%;
+            width: 40%;
+            padding: 1rem 2rem;
+            transition: right .3s ease-in-out;
+            height: calc(100vh - 64px);
+            overflow-y: auto;
+            flex-direction: column;
+        }
+        &-item {
+            width: 100%;
+            border-bottom: 1px solid var(--color-border);
+            padding: .70rem 0;
+            margin-right: 0;
+            transition: none;
+            &:hover {
+                transform: scale(1);
+                transition: none;
+            }
+        }
+        &-link {
+            color: var(--color-secondary);
+        }
+    }
+    @include responsive (medium) {
+        --font-size-logo: 1.5rem;
+        
+        &-list {
+            height: calc(100vh - 48px);
+            width: 70%;
+            right: -70%;
+            top: 6rem;
+        }
+        &-toggle {
+            font-size: 1.7rem;
+        }
+    }
+    @include responsive(456px) {
+        &-reffer {
+            padding: 5px 20px;
+            i {
+                margin-right: .50rem;
+                font-size: .80rem;
+            }
+        }
+        &-link-reff {
+            font-size: 13px;
+        }
+    }
+    @include responsive(small) {
+        &-list {
+            width: 90%;
+            right: -90%;
+        }
+    }
+} 
+
+.open-navigation {
+    right: 0;
+    transition: right .3s ease-in-out;
+}

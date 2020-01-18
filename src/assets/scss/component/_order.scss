@@ -1,0 +1,329 @@
+.order {
+    &-header {
+        padding: .70rem 0;
+        border-bottom: 1px solid var(--color-secondary);
+    }
+    &-num {
+        color: var(--color-text-title);
+        position: relative;
+        padding-left: 1.2rem;
+        font-weight: normal;
+        font-size: 20px;
+        text-transform: uppercase;
+        span {
+            margin-left: .50rem;
+            font-size: 16px;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            border-radius: 100px;
+            height: 100%;
+            background-color: var(--color-secondary);
+        }
+    }
+    &-grid {
+        display: grid;
+        grid-template-columns: 30% 1fr;
+        grid-column-gap: 2rem;
+        margin-top: 1.5rem;
+    }
+
+    &-payment, &-sidebar {
+        background-color: #040114;
+        border-radius: 8px;
+        padding: 1rem 1.5rem;
+        box-shadow: 0 0 .80px var(--color-secondary);
+    }
+    &-payment {
+        position: relative;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto 150px 260px;
+    }
+
+    &-head {
+        border-bottom: 1px solid var(--color-secondary);
+        padding: 0 0 .50rem 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    &-title {
+        color: var(--color-text-title);
+        font-weight: normal;
+        font-size: 16px;
+    }
+    &-body {
+        margin-top: 1rem;
+    }
+    &-info, &-total {
+        color: var(--color-text-title);
+        font-size: 14px;
+        font-weight: normal;
+        padding: .40rem 0;
+        border-bottom: 1px dotted var(--color-secondary);
+        display: flex;
+        justify-content: space-between;
+    }
+    &-content {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    &-package {
+        font-size: 17px;
+        color: var(--color-secondary);
+        font-weight: normal;
+        display: flex;
+        flex-direction: column;
+        &:nth-child(2) {
+            text-align: center;
+        }
+        &:nth-child(3) {
+            text-align: right;
+        }
+    }
+    &-data {
+        color: var(--color-text-title);
+        font-size: 12px;
+        font-weight: normal;
+        padding: .40rem 0;
+    }
+    &-total {
+        margin-top: 1.5rem;
+    }
+    &-footer {
+        padding: 1rem 0 0 0;
+        display: flex;
+        justify-content: flex-end;
+    }
+    &-button-cancel {
+        background-color: rgb(218, 22, 22);
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: .70rem 1rem;
+        border-radius: 5px;
+        color: var(--color-text-title);
+    }
+    &-payment-content {
+        background-color: var(--color-main-dark);
+        width: 100%;
+        border-radius: 5px;
+        padding: .50rem 1rem;
+        display: grid;
+        grid-template-columns: 20% 1fr;
+        justify-items: center;
+        align-items: center;
+        border-bottom: 1px solid var(--color-secondary);
+        position: relative;
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/img-effect-1.png);
+            background-repeat: no-repeat;
+            background-position: right;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.04;
+        }
+    }
+    &-payment-flex {
+        display: flex;
+        width: 100%;
+        margin-top: 1.2rem;
+    }
+    &-payment-hash {
+        margin-top: 1rem;
+        background-color: var(--color-main-dark);
+        width: 100%;
+        padding: .50rem 1rem;
+        border-radius: 5px;
+        border-bottom: 1px solid var(--color-secondary);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/img-effect-1.png);
+            background-repeat: no-repeat;
+            background-position: right;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.04;
+        }
+    }
+    &-payment-qr {
+        justify-self: start;
+        position: relative;
+        canvas {
+            display: block;
+        }
+    }
+    &-payment-input-content {
+        justify-self: start;
+        width: 100%;
+        display: flex;
+        position: relative;
+    }
+    &-payment-input {
+        width: 100%;
+        border-radius: 3px;
+        border: none;
+        outline: none;
+        padding: 12px 8px;
+        font-size: 1rem;
+        position: relative;
+    }
+    &-payment-input-alt {
+        width: 100%;
+        border-radius: 3px;
+        border: none;
+        outline: none;
+        padding: 12px 8px;
+        font-size: 1rem;
+        position: relative;
+        margin-top: 1rem;
+    }
+    &-payment-button {
+        border: 1px solid var(--color-secondary);
+        position: relative;
+        left: -5px;
+        border-radius: 3px;
+        padding: 0 .80rem;
+        height: 42px;
+        background-color: var(--color-main);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-secondary);
+        font-size: 14px;
+        cursor: pointer;
+        transition:  transform .1s ease-in-out;
+        i {
+            margin-left: .40rem;
+            color: var(--color-secondary);
+        }
+        &:hover {
+            transform: scale(1.05);
+            transition:  transform .1s ease-in-out;
+        }
+        &:active {
+            transform: scale(0.9);
+            transition:  transform .1s ease-in-out;
+        }
+    }
+    &-payment-submit {
+        position: relative;
+        color: #fff;
+        cursor: pointer;
+        background-color: var(--color-main);
+        border-radius: 5px;
+        padding: 10px 25px;
+        display: inline-block;
+        font-size: 15px;
+        text-align: center;
+        border: 1px solid var(--color-secondary);
+        transition: color .2s ease-in-out;
+        margin-top: 1rem;
+        &:hover {
+            background: var(--color-main-dark);
+            color: var(--color-secondary);
+            transition: all .2s ease-in-out;
+        }
+    }
+
+    &-payment-span {
+        font-size: 16px;
+        color: var(--color-secondary);
+        margin-left: .40rem;
+    } 
+    &-payment-paragraph {
+        text-transform: uppercase;
+        font-size: 14px;
+        color: var(--color-text-title);
+    }
+    &-payment-legend, &-payment-legend-subtitle {
+        color: var(--color-text-title);
+        text-align: center;
+    }
+    &-payment-legend-subtitle {
+        font-size: 12px;
+        margin-top: -2px;
+    }
+    &-aly {
+        font-family: var(--heading-font);
+    }
+    @include responsive(1300px) {
+        &-grid {
+            grid-column-gap: 1rem;
+        }
+    }
+    @include responsive(1280px) {
+        &-grid {
+            grid-template-columns: 100%;
+            grid-row-gap: 1rem;
+        }
+        &-payment {
+            position: relative;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: auto 280px 260px;
+        }
+    }
+    @include responsive(970px) {
+        &-payment-content {
+            padding: .50rem;
+        }
+        &-payment-hash {
+            padding: .50rem;
+        }
+        &-payment-input-content {
+            align-self: center;
+            margin-bottom: 0;
+        }
+        &-payment-qr {
+            align-self: center;
+        }
+    }
+    @include responsive(900px) {
+        &-payment-content {
+            margin-top: 2rem;
+            grid-template-columns: 100%;
+            grid-row-gap: .80rem;
+        }
+        &-payment-qr {
+            align-self: end;
+            justify-self: center;
+        }
+    }
+    @include responsive(720px) {
+        &-payment {
+            grid-template-rows: auto 280px 280px;
+        }
+    }
+    @include responsive(medium) {
+        &-payment {
+            grid-template-rows: auto 280px 290px;
+        }
+    }
+    @include responsive(500px) {
+        &-payment, &-sidebar {
+            padding: .70rem;
+        }
+    }
+    @include responsive(small) {
+        &-grid {
+            // grid-template-rows: 1fr 320px;
+        }
+    }
+}

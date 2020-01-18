@@ -1,0 +1,278 @@
+.main {
+    &-title, &-subtitle {
+        text-align: center;   
+    }
+    &-title {
+        font-family: var(--heading-font);
+        font-size: var(--h1-font-size);
+        margin-top: 1rem;
+        span {
+            color: var(--color-logo);
+        }
+    }
+    &-subtitle {
+        color: var(--color-text-paragraph);
+        font-size: var(--h3-font-size);
+    }
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: 2rem;
+    }
+    &-icon {
+        width: 80px;
+        animation: rotate 5s infinite linear;
+
+        @keyframes rotate {
+            from {
+                transform: rotate(360deg);
+            }
+        }
+    }
+    &-card {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    &-grid-title {
+        font-size: var(--h2-font-size);
+        font-family: var(--heading-font);
+        color: var(--color-text-title);
+        &::first-letter {
+            color: var(--color-secondary);
+        }
+    }
+    &-description {
+        color: var(--color-text-paragraph);
+    }
+    &-button {
+        background-color:transparent;
+        color: var(--color-secondary);
+        text-align: center;
+        cursor: pointer;
+        font-size: 1.2rem;
+        animation: scale_ .8s alternate infinite ease-in-out;
+        @keyframes scale_ {
+            from {
+                transform: scale(1.2);
+                // color: var(--color-text-title);
+            }
+        }
+        span {
+            font-family: var(--heading-font);
+        }
+    }
+    &-content-title {
+        color: var(--color-text-title);
+        font-size: 3rem;
+        text-align: center;
+    }
+    &-content-alt, &-content-alt-2 {
+        font-family: var(--heading-font);
+        color: #000;
+    }
+    &-content-alt-2 {
+        color: var(--color-logo);
+    }
+
+    &-content-dialog { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &-coinomi {
+        color: var(--color-text-title);
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    &-content-img {
+        margin-top: 1rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 170px;
+        &:nth-child(2) {
+            margin-left: 1.5rem;
+        }
+    }
+    &-content-para {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    &-paragraph, &-paragraph-alt {
+        text-align: center;
+        color: var(--color-text-title);
+        span {
+            color: var(--color-secondary);
+        }
+    }
+    &-paragraph-alt {
+        margin-bottom: .70rem;
+    }
+    &-content-grid {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 1rem;
+        grid-template-rows: 380px;
+        justify-items: center;
+        img {
+            width: 200px;
+            height: 300px;
+            margin-top: .80rem;
+        }
+    }
+    &-content-item {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &-content-item-title {
+        color: var(--color-text-title);
+        font-size: 17px;
+    }
+    &-content-item-description {
+        color: var(--color-text-paragraph);
+        font-size: 14px;
+        text-align: center;
+        width: 100%;
+    }
+    &-display {
+        text-align: center;
+        display: none;
+        color: var(--color-secondary);
+        cursor: pointer;
+    }
+    @include responsive(1114px) {
+        &-content-grid {
+            grid-template-columns: repeat(2, 1fr);
+            grid-row-gap: 1rem;
+        }
+    }
+
+    @include responsive (777px) {
+        &-grid {
+            grid-template-columns: 100%;
+            grid-row-gap: 1rem;
+        }
+        &-icon {
+            width: 70px;
+        }
+    }
+    @include responsive(720px) {
+        &-content-title {
+            font-size: 2.2rem;
+        }
+        &-coinomi {
+            font-size: 1.2rem;
+        }
+    }
+    @include responsive (medium) {
+        &-card {
+            padding: 0;
+            &:nth-child(1) {
+                margin-top: 1rem;
+            }
+        }
+        &-button {
+            font-size: 1rem;
+        }
+        &-content-video {
+            margin-top: .70rem;
+        }
+        &-content-grid {
+            grid-template-columns: 100%;
+        }
+    }
+    @include responsive(550px) {
+        &-display {
+            display: inline-block;
+        }
+    }
+    @include responsive(405px) {
+        &-content-img {
+            margin-top: .60rem;
+            width: 120px;
+            &:nth-child(2) {
+                margin-left: 1rem;
+            }
+        }
+        &-content-title {
+            font-size: 1.5rem;
+        }
+        &-coinomi {
+            font-size: 1rem;
+        }
+        &-paragraph {
+            &:nth-child(1) {
+                font-size: 14px;
+            }
+        }
+    }
+    @include responsive(340px) {
+        &-paragraph {
+            &:nth-child(1) {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.modal {
+    &-alt {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: var(--z-modal);
+        background-color: rgba(4,1,20,.99);
+        width: 100vw;
+        height: 100vh;
+        transform: scale(0);
+        transition: all .8s ease-in-out; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::before {
+            content: "";
+            background-image: url(../img/img-effect-3.png);
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            background-position: bottom right;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: .05;
+        }
+    }
+    &-content {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;   
+    }
+    @include responsive (550px) {
+        &-content {
+            iframe {
+                display: none;
+            }
+            padding: .30rem;
+        }
+    }
+}
+.container-main-overflow {
+    overflow-y: auto;
+    overflow-x: auto;
+}

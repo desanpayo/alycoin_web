@@ -1,0 +1,207 @@
+.edit {
+
+    &-content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        &-title {
+            margin-top: 2rem;
+            font-size: 2rem;
+            color: var(--color-text-title);
+        }
+    }
+    &-header {
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--color-secondary);
+    }
+    &-register {
+        color: var(--color-text-title);
+        span {
+            font-size: 14px;
+            margin-left: .50rem;
+            color: var(--color-text-paragraph);
+        }
+    }
+    &-account {
+        color: var(--color-text-title);
+        position: relative;
+        padding-left: 1.2rem;
+        font-weight: normal;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            border-radius: 100px;
+            height: 100%;
+            background-color: var(--color-secondary);
+        }
+    }
+
+    &-form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+        padding: 2rem 4rem;
+        border-radius: 8px;
+    }
+    &-group, &-select-content {
+        background-color: rgba(0,0,0,.5);
+        padding: 8px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        border-radius: 4px;
+        position: relative;
+        width: 100%;
+    }
+    &-group-pin {
+        background-color: rgba(0,0,0,.5);
+        padding: 8px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        border-radius: 4px;
+        position: relative;
+        width: 100%;
+        grid-column: 1 / span 2;
+        position: relative;
+    }
+    &-send {
+        position: absolute;
+        top: 0;
+        right: 1.5rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 0 1rem;
+        transition: .1s ease-in-out;
+        span {
+            color: var(--color-text-title);
+            &::selection {
+                background-color: transparent;
+            }
+        }
+        &:hover, &:hover span {
+            background-color: #040114;
+            color: var(--color-secondary);
+        }
+        &:active {
+            transform: scale(0.9);
+            transition: .1s ease-in-out;
+        }
+    }
+    &-input {
+        color: rgba(255,255,255,.5);
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 8px;
+    }
+    &-select {
+        height: 30px;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        color: var(--color-secondary);
+        outline: none;
+    }
+    &-label {
+        color: rgba(255,255,255,.5);
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    &-crypto {
+        grid-column: 1 / span 2;
+        &-title {
+            color: var(--color-text-title);
+            font-weight: normal;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+    &-group-crypto {
+        background-color: rgba(0,0,0,.5);
+        padding: 8px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        border-radius: 4px;
+        position: relative;
+        width: 100%;
+        grid-column: 1 / span 2;
+    }
+    &-submit {
+        color: #fff;
+        background-color: var(--color-main);
+        border-radius: 5px;
+        padding: 10px 28px;
+        font-size: 16px;
+        display: inline-block;
+        border: 1px solid var(--color-secondary);
+        transition: color .2s ease-in-out;
+        cursor: pointer;
+        &:hover {
+            background: var(--color-main-dark);
+            color: var(--color-secondary);
+            transition: all .2s ease-in-out;
+        }
+    }
+    @include responsive(medium) {
+        &-form {
+            grid-template-columns: 100%;
+            padding: 0;
+            width: 100%;
+            grid-gap: 0;
+        }
+        &-crypto {
+            grid-column: span 1;
+            &-title {
+                font-size: 1.6rem;
+                margin-bottom: 1rem;
+            }
+        }
+        &-group-crypto {
+            grid-column: span 1;
+        }
+        &-group-pin {
+            grid-column: span 1;
+        }
+        &-group, &-select-content {
+            margin-bottom: 20px;
+        }
+        &-select {
+            height: 25px;
+        }
+        &-content {
+            &-title {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                font-size: 1.6rem;
+            }
+        }
+    }
+    @include responsive(small) {
+        &-header {
+            flex-direction: column;
+            padding: .50rem 0;
+        }
+        &-account {
+            padding-left: 0;
+            font-size: 1.3rem;
+            &::before {
+                display: none;
+            }
+        }
+        &-button {
+            text-align: center;
+        }
+    }
+}

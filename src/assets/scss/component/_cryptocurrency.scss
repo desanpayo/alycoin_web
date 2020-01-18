@@ -1,0 +1,31 @@
+.cryptocurrency {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    grid-column-gap: 1rem;
+
+    @include responsive (1130px) {
+        & {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 1rem;
+        }
+        &-card {
+            &:nth-child(1) {
+                grid-column: 1 /span 2;
+            }
+        }
+    }
+    @include responsive (500px) {
+        & {
+            grid-template-columns: 100%;
+        }
+        &-card {
+            &:nth-child(1) {
+                grid-column: 1;
+            }
+        }
+    }
+}

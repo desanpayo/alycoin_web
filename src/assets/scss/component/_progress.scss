@@ -1,0 +1,125 @@
+.progress {
+    height: 350px;
+    background-color: #040114;
+    box-shadow: 0 0 10px var(--color-secondary);
+    border-radius: 8px;
+    display: grid;
+    grid-template-rows: 60px 1fr;
+    position: relative;
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/img-effect-1.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        opacity: 0.03;
+    }
+
+    &-header {
+        padding: 1rem 2rem;
+        border-bottom: 1px solid var(--color-border);
+        h2 {
+            font-size: 1.4rem;
+            color: var(--color-text-title);
+            &::first-letter {
+                color: var(--color-secondary);
+                font-family: var(--heading-font);
+            }
+        }
+    }
+    &-body {
+        padding: 1rem 2rem;
+        display: grid;
+        grid-template-columns: 250px 1fr 250px;
+    }
+    &-image {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    }
+    &-content {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+    &-bar-content {
+        border-radius: 3px;
+        width: 100%;
+        grid-column: 1 / span 2;
+        align-self: start;
+    }
+    &-information {
+        align-self: end;
+        margin-bottom: 2rem;
+        width: 100%;
+        text-align: center;
+        span {
+            color: var(--color-secondary);
+        }
+        &:nth-child(1) {
+            border-right: 1px solid var(--color-border)
+        }
+    }
+    &-des {
+        color: var(--color-text-title);
+    }
+    &-alytravel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-travel {
+        height: 150px;
+        width: 150px;
+    }
+    &-description {
+        margin-top: 1rem;
+        color: #fff;
+        text-align: center;
+        span {
+            color: var(--color-secondary);
+            font-weight: bold;
+        }
+    }
+
+    @include responsive (xlarge) {
+        &-body {
+            padding: 1rem 2rem;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-row-gap: 1rem;
+        }
+        & {
+            height: auto;
+        }
+    }
+    @include responsive (small) {
+        &-header {
+            text-align: center;
+        }
+        &-body {
+            padding: .50rem 1rem;
+        }
+        &-image {
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        &-travel{
+            width: 100px;
+            height: 100px;
+        }
+    }
+}

@@ -1,0 +1,230 @@
+.register {
+    &-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: var(--z-fixed);
+        width: 100%;
+        height: 100%;
+        background: url(../img/img-register.png) no-repeat center / cover;
+        &::before {
+            content: "";
+            background-color: var(--color-main);
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            opacity: .8;
+        }
+    }
+    &-main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: .80rem;
+    }
+    &-read {
+        position: relative;
+    }
+    &-overflow {
+        position: relative;
+        z-index: var(--z-fixed);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5rem;
+    }
+    
+    &-form {
+        width: 490px;
+        background-color: rgba(0,0,0,.6);
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+
+    &-group, &-select-content {
+        background-color: rgba(0,0,0,.5);
+        padding: 8px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        border-radius: 4px;
+        position: relative;
+        width: 100%;
+        position: relative;
+    }
+    &-input {
+        color: rgba(255,255,255,.5);
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 8px;
+    }
+    &-select {
+        height: 30px;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        color: var(--color-secondary);
+        outline: none;
+    }
+    &-label {
+        color: rgba(255,255,255,.5);
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+   
+    &-circle {
+        position: absolute;
+        z-index: var(--z-fixed);
+        left: 40px;
+        bottom: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        transition: all .5s ease;
+        a {
+            font-size: 3rem;
+            color: #3F93F7;
+        }
+        &:hover {
+            transform: translateY(-8px);
+        }
+        &:hover a {
+            color: darken(#3F93F7, 10);
+        }
+    } 
+    &-header {
+        width: 490px;
+        display: flex;
+        margin-bottom: 1rem;
+    }
+
+    &-content {
+        margin-left: 1rem;
+    }
+    &-icon {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        i {
+            font-size: 3.5rem;
+            margin-right: 1rem;
+            color: var(--color-text-paragraph);
+        }
+    }
+    &-alycoin {
+        font-size: 3rem;
+        font-family: var(--heading-font);
+        span {
+            color: var(--color-logo);
+        }
+    }
+    &-title {
+        font-size: 14px;
+        color: var(--color-text-title);
+        font-weight: normal;
+        margin-left: 1rem;
+    }
+
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: .70rem;
+    }
+    &-captcha {
+        margin-top: 1rem;
+    }
+    &-button {
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+    &-submit {
+        padding: 10px 20px;
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+        font-size: 17px;
+        background: linear-gradient(to right, var(--color-secondary), var(--color-main-dark)); 
+        cursor: pointer;
+        color: var(--color-text-title);
+        &:hover {
+            background: linear-gradient(to right, var(--color-main-dark), var(--color-secondary)); 
+        }
+        &:focus {
+            border: none;
+            outline: none;
+        }
+    }
+    &-information {
+        margin-top: 1rem;
+    }
+    &-term {
+        font-size: 13px;
+        text-align: center;
+        color: var(--color-text-title);
+    }
+    &-strong {
+        color: #fff;
+        &:hover {
+            color: var(--color-secondary);
+        }
+    }
+    &-error {
+        color: rgb(250, 50, 50);
+        position: absolute;
+        bottom: -17px;
+        left: 0;
+        font-size: 12px;
+        font-style: italic;
+        &::selection {
+            background-color: transparent;
+        }
+    }
+    @include responsive(medium) {
+        &-circle {
+            left: 5px;
+            bottom: 5px;
+        }
+    }
+    @include responsive(500px) {
+        &-form {
+            width: 100%;
+            background-color: transparent;
+        }
+        &-header {
+            width: 100%;
+        }
+        &-grid {
+            grid-template-columns: 100%;
+        }
+        &-main {
+            grid-template-columns: 100%;
+            grid-column-gap: 0;
+        }
+        &-circle {
+            width: 40px;
+            height: 40px;
+            a {
+                font-size: 2.5rem;
+            }
+        } 
+    }
+    @include responsive(small) {
+        &-form {
+            padding: 1rem .40rem;
+        }
+        &-alycoin {
+            font-size: 2.5rem;
+        }
+        &-icon {
+            i {
+                font-size: 2.7rem;
+                margin-right: .80rem;
+            }
+        }
+    }
+    
+}

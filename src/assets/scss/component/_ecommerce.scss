@@ -1,0 +1,48 @@
+.ecommerce {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-title {
+        text-transform: uppercase;
+        font-size: 6rem;
+        font-weight: 800;
+        letter-spacing: 1rem;
+        color: var(--color-text-title);
+    }
+    &-description {
+        font-size: 1.4rem;
+        color: var(--color-text-title);
+        letter-spacing: .20rem;
+        
+    } 
+    @include responsive(xlarge) {
+        &-title {
+            font-size: 4rem;
+            letter-spacing: .70rem;
+        }
+        &-description {
+            font-size: 1.3rem;
+        }
+    }
+    @include responsive(720px) {
+        &-title {
+            font-size: 3rem;
+            letter-spacing: .50rem;
+        }
+        &-description {
+            font-size: 1.3rem;
+            letter-spacing: 0;
+        }
+    }
+    @include responsive(550px) {
+        &-title {
+            text-align: center;
+            font-size: 2.5rem;
+            letter-spacing: .20rem;
+        }
+        &-description {
+            font-size: .80rem;
+        }
+    }
+}  

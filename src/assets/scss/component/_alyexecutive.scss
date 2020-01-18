@@ -1,0 +1,44 @@
+.alyexecutive {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    &-paragraph {
+        color: var(--color-text-title);
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+    img {
+        width: 200px;
+    } 
+    &-download {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    &-text {
+        color: var(--color-secondary);
+        margin-top: 1rem;
+        cursor: pointer;
+        
+        &:nth-child(2) {
+            margin-top: 0;
+        }
+        &:hover {
+            color: var(--color-text-title);
+        }
+    }
+    @include responsive(medium) {
+        &-paragrapg {
+            font-size: 1rem;
+        }
+    }
+    @include responsive(small) {
+        & img {
+            width: 130px;
+        }
+    }
+}

@@ -1,0 +1,110 @@
+.reffer {
+    background-color: #040114;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0px 0px 8px var(--color-secondary);
+    position: relative;
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/img-effect-2.png);
+            background-repeat: no-repeat;
+            background-position: right;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.03;
+        }
+    &-title {
+        text-align: center;
+        color: var(--color-secondary);
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        display: inline-block;
+        padding: .50rem 1rem;
+        border-radius: 8px;
+        font-weight: normal;
+        background-color: var(--color-main-dark);
+    }
+    &-description {
+        margin-top: .40rem;
+        font-size: 18px;
+        color: var(--color-text-paragraph);
+    }
+
+    &-content {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 95% 1fr; 
+    }
+    &-input {
+        width: 100%;
+        border-radius: 3px;
+        border: none;
+        outline: none;
+        padding: 15px 25px;
+        font-size: 1rem;
+    }
+    &-button {
+        border: none;
+        position: relative;
+        left: -90px;
+        top: 3px;
+        border-radius: 3px;
+        padding: 0 .80rem;
+        height: 42px;
+        background-color: var(--color-main);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-secondary);
+        font-size: 14px;
+        cursor: pointer;
+        transition:  transform .1s ease-in-out;
+        i {
+            margin-left: .40rem;
+            color: var(--color-secondary);
+        }
+        &:hover {
+            transform: scale(1.05);
+            transition:  transform .1s ease-in-out;
+        }
+        &:active {
+            transform: scale(0.9);
+            transition:  transform .1s ease-in-out;
+        }
+    }
+    &-input {
+        &::selection {
+            background-color: transparent;
+        }
+    }
+    @include responsive (600px) {
+        &-title {
+            font-size: 1.5rem;
+        }
+        &-description {
+            font-size: 16px;
+        }
+    }
+    @include responsive (500px) {
+        &-title {
+            font-size: 1.2rem;
+        }
+    }
+    @include responsive (small) {
+        & {
+            padding: 1rem;
+        }
+    }
+    @include responsive (320px) {
+        &-title {
+            font-size: 1rem;
+        }
+        & {
+            padding: .40rem;
+        }
+    }
+} 

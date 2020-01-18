@@ -1,0 +1,135 @@
+.table {
+    $width: 550px;
+    font-size: .85em;
+    border-collapse: collapse;
+    border: .6px solid var(--color-secondary);
+    color: var(--color-text-title);
+    min-width: $width;
+    
+    & td, & th {
+        padding: 0.8em;
+        border-bottom: 1px solid var(--color-text-paragraph);
+    }
+    & th {
+        background-color: var(--color-secondary);
+        color: #fff;
+        font-weight: normal;
+        text-align: center; 
+    } 
+    & td {
+        text-align: center;
+    }
+    & tr:hover {
+        background-color: darken(#040114,1);
+        cursor: pointer;
+    } 
+    &-container {
+        padding: 3rem 1rem;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &-title {
+        color: var(--color-text-title);
+        font-weight: normal;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        padding: 1rem 0 1rem 1rem;
+        width: 100%;
+        border-bottom: 1px solid var(--color-secondary);
+    }
+    &-none {
+        color: var(--color-text-title);
+        font-weight: normal;
+    }
+    &-showmore {
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+        color: var(--color-text-title);
+        padding: 1rem;
+        font-size: 14px;
+        cursor: pointer;
+        z-index: var(--z-tooltip);
+        i {
+            position: relative;
+            top: -2px;
+            margin-left: .40rem;
+        }
+        &:hover {
+            color: var(--color-secondary);
+            text-decoration: underline; 
+        }
+    }
+    &-content {
+        background-color: #040114;
+        border-radius: 8px;
+        box-shadow: 0 0 10px var(--color-secondary);
+        position: relative;
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/img-effect-1.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            opacity: 0.03;
+        }
+    }
+    &-content-alt {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    @include responsive(xxlarge) {
+        &-container {
+            overflow-x: auto;
+        }
+    }
+    @include responsive(xlarge) {
+        $width: 600px;
+        & {
+            min-width: $width;
+        }
+    }
+    @include responsive(large) {
+        $width: 500px;
+        & {
+            min-width: $width;
+        }
+    }
+    @include responsive(700px) {
+        &-none {
+            font-size: 1rem;
+        }
+        &-title {
+            font-size: 1rem;
+        }
+    }
+    @include responsive(550px) {
+        &-none {
+            font-size: .80rem;
+        }
+        &-title {
+            font-size: .80rem;
+        }
+    }
+}
+
+.padding {
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.false {
+    color: rgb(247, 92, 92);
+}
+.true {
+    color: rgb(95, 207, 51);
+}

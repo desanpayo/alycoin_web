@@ -1,0 +1,242 @@
+.retirement {
+    &-header {
+        width: 100%;
+        grid-column: 1 / span 2;
+        padding: 0 0 .80rem 0;
+        border-bottom: 1px solid var(--color-secondary);
+    }
+    &-subtitle {
+        color: var(--color-text-title);
+        font-weight: normal;
+        position: relative;
+        padding-left: 1rem;
+        &::before {
+            content: "";
+            background-color: var(--color-secondary);
+            position: absolute;
+            width: 4px;
+            border-radius: 30px;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+    }
+    &-grid {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+        justify-items: center;
+    }
+
+    &-click {
+        width: 100%;
+        cursor: pointer;
+    }
+
+
+    &-card {
+        background-color: #040114;
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 0 5px var(--color-secondary);
+        padding: 1rem 2rem;
+        display: grid;
+        grid-template-columns: 20% 1fr;
+        grid-column-gap: 2rem;
+        justify-items: center;
+        align-items: center;
+        position: relative;
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/img-effect-1.png);
+            background-repeat: no-repeat;
+            background-position: top right;
+            position: absolute;
+            top: 0;
+            opacity: 0.05;
+        }
+    }
+    &-icon {
+        i {
+            color: var(--color-secondary);
+            font-size: 3.5rem;
+        }
+    }
+    &-content {
+        width: 100%;
+        padding: 0 2rem;
+        display: grid;
+        grid-auto-columns: 100%;
+        border-left: 1px solid var(--color-secondary);
+    }
+    &-title {
+        color: var(--color-secondary);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: .90rem;
+    }
+    &-main {
+        display: flex;
+        align-items: flex-end;
+        margin-top: .80rem;
+    }
+    &-data {
+        color: var(--color-text-title);
+        font-weight: 660;
+        font-size: 1rem;
+        margin-right: .80rem;
+    }
+    &-dolar {
+        font-size: .70rem;
+        color: var(--color-secondary);
+        position: relative;
+        top: -3px;
+    }
+    &-description {
+        margin-top: .60rem;
+        color: var(--color-text-title);
+        text-transform: uppercase;
+        font-size: .80rem;
+    }
+
+    &-img {
+        width: 20px;
+        margin-right: .80rem;
+    }
+    &-table {
+        width: 100%;
+        grid-column: 1 / span 3;
+    }
+    @include responsive(1290px) {
+        &-card {
+            padding: .80rem;
+        }
+    }
+    @include responsive(1160px) {
+        &-card {
+            grid-template-columns: 15% 1fr;
+        }
+        &-icon {
+            i {
+                color: var(--color-secondary);
+                font-size: 3rem;
+            }
+        }
+        &-grid {
+            grid-column-gap: .80rem;
+        }
+    }
+    @include responsive(1084px) {
+        &-grid {
+            grid-template-columns: 100%;
+            grid-row-gap: 1rem;
+        }
+        &-table {
+            grid-column: 1;
+        }
+    }
+}
+
+.modal-title {
+    color: #ffffff;
+    font-size: 3rem;
+    &::first-letter {
+        color: var(--color-secondary);
+    } 
+}
+.retirement-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.retirement-form {
+    padding: 2rem;
+}
+
+.retirement-grid-form {
+    display: flex;
+}
+
+.retirement-group {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    &:nth-child(1) {
+        margin-right: 2rem;
+    }
+    margin-bottom: 2rem;
+}
+
+.retirement-label {
+    color: #fff;
+    font-size: 1.8rem;
+    text-align: center;
+} 
+
+.retirement-input {
+    padding: .50rem .80rem;
+    font-size: 17px;
+    border: none;
+    width: 100%;
+}
+
+.retirement-submit {
+    margin-top: 1rem;
+    color: #fff;
+    background-color: var(--color-main-dark);
+    border: none;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    &:hover {
+        background-color: var(--color-main);
+    }
+}
+
+@include responsive (500px) {
+    .modal-title {
+        color: #ffffff;
+        font-size: 2rem;
+    }
+    .retirement-label {
+        font-size: 1.1rem;
+    } 
+    .retirement-form {
+        padding: .40rem;
+        width: 100%;
+    }
+    .retirement-grid-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .retirement-group {
+        &:nth-child(1) {
+            margin-right: 0;
+        }
+    }
+}
+
+.button-retirement {
+    border: 1px solid var(--color-secondary);
+    padding: .20rem .70rem;
+    border-radius: 3px;
+    position: relative;
+    z-index: var(--z-normal);
+    &:hover {
+        background-color: #040114;
+        border: 1px solid var(--color-secondary);
+        color: #fff;
+    }
+}

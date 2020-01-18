@@ -1,0 +1,24 @@
+.travel {
+    width: 1080px;
+    height: 100%;
+
+    &-title {
+        font-size: var(--h2-font-size);
+        font-family: var(--heading-font);
+        color: var(--color-text-title);
+        margin-bottom: 1.5rem;
+        &::first-letter {
+            color: var(--color-secondary);
+        }
+    }
+    @include responsive(1080px) {
+        & {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+                                                                                                                                            

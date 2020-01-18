@@ -1,0 +1,247 @@
+.page {
+    &-banner {
+        height: 450px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-main);
+            opacity: .5;
+        }
+    }
+    &-title-main {
+        font-size: 4rem;
+        color: var(--color-text-title);
+        position: relative;
+        z-index: var(--z-normal);
+        font-family: var(--heading-font);
+    }
+    &-subtitle {
+        display: inline-block;
+        color: #000;
+        span {
+            color: var(--color-logo);
+        }
+
+    }
+    &-img {
+        z-index: var(--z-back);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &-resumen {
+        margin-top: 480px;
+    }
+    &-title {
+        font-size: 3rem;
+        font-family: var(--heading-font);
+        color: var(--color-text-title);
+        text-align: center;
+        &::first-letter {
+            color: var(--color-secondary);
+        }
+    }
+    &-title--ben {
+        font-size: 1.7rem;
+        color: var(--color-text-title);
+        font-family: var(--heading-font);
+        &::first-letter {
+            color: var(--color-secondary);
+        }
+    }
+    &-subtitle-description {
+        font-size: 2rem;
+        text-align: center;
+        color: var(--color-text-title);
+        margin: 2rem 0;
+        span {
+            font-family: var(--heading-font);
+        }
+    }
+    &-paragraph {
+        margin-top: .80rem;
+        color: var(--color-text-title);
+    }
+    &-content-img {
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0;
+    }
+    &-team-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-image: linear-gradient(45deg, #040114, var(--color-secondary));
+        box-shadow: 1px 1px 12px #29BEFF;
+        padding: 7px;
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+        &:hover {
+            transition: all .3s ease-in-out;
+            background-image: linear-gradient(45deg, var(--color-secondary), #040114);
+        }
+        &:hover::before {   
+            transform: rotate(60deg);
+            transition: transform .3s ease-in-out, color .3s ease-in-out;
+            border-image-source: linear-gradient(to top, #1C76FE, #fff);
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            height: 200px;
+            top: -28px;
+            left: 50%;
+            z-index: -1;
+            transform: rotate(45deg);
+            border-right: 3px solid var(--color-secondary);
+            border-image-source: linear-gradient(to top, #fff, #1C76FE);
+            border-image-slice: 0.5;
+            transition: transform .3s ease-in-out, color .3s ease-in-out;
+        }
+        img {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            border: 3px solid #ffffff;
+        }
+    }
+    &-team-title {
+        font-size: 3rem;
+        font-family: var(--heading-font);
+        color: var(--color-text-title);
+        text-align: center;
+        &::first-letter {
+            color: var(--color-secondary);
+        }
+        div {
+            display: inline-block;
+            color: #000;
+            span {
+                color: var(--color-logo);
+            }
+        }
+    }
+    &-team {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    &-team-content {
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    &-team-name {
+        font-size: 16px;
+        font-weight: normal;
+        color: var(--color-text-title);
+    }
+    &-team-icon {
+        margin-top: 2rem;
+        display: flex;
+    }
+    &-team-cargo {
+        font-size: 14px;
+        color: var(--color-text-title);
+        font-weight: normal;
+        color: var(--color-secondary);
+    }
+    &-team-main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 230px);
+        grid-gap: 1rem;
+        justify-content: center;
+        justify-items: start;
+    }
+    @include responsive(1200px) {
+        &-team-main {
+            grid-template-columns: repeat(2, 50%);
+            grid-template-rows: repeat(5, 1fr);
+            grid-row-gap: 2rem;
+        }
+    }
+    @include responsive(large) {
+        &-team-img {
+            width: 120px;
+            height: 120px;
+            &::before {
+                height: 170px;
+            }
+        }
+    }
+    @include responsive(780px) {
+        &-team-main {
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(9, 1fr);
+        }
+    }
+    @include responsive(medium) {
+        &-team-title {
+            font-size: 2rem;
+        }
+        &-subtitle-description {
+            font-size: 1.8rem;
+            margin: 1rem 0;
+        }
+        &-title {
+            font-size: 2rem;
+        }
+        &-title-main {
+            font-size: 3rem;
+        }
+        &-banner {
+            height: 400px;
+        }
+        &-resumen {
+            margin-top: 400px;
+        }
+    }
+    @include responsive(small) {
+        &-title-main {
+            font-size: 2rem;
+        }
+        &-banner {
+            height: 380px;
+        }
+        &-resumen {
+            margin-top: 390px;
+        }
+    }
+    @include responsive(320px) {
+        &-team-img {
+            width: 100px;
+            height: 100px;
+            &::before {
+                height: 150px;
+            }
+        }
+        &-team-icon {
+            margin-top: 1rem;
+        }
+        &-team-title {
+            font-size: 1.9rem;
+        }
+        &-title-main {
+            font-size: 1.9rem;
+        }
+    }
+}

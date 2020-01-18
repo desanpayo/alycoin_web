@@ -1,0 +1,166 @@
+.pay {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-items: center;
+    margin-top: 4rem;
+    position: relative;
+    z-index: 2;
+    &-wrap {
+        position: relative;
+        width: 400px;
+        height: 300px;
+        cursor: pointer;
+        &:hover .pay-card:nth-child(1) {
+            transform: rotate(-45deg) translate(0,0);
+        }
+        &:hover .pay-card:nth-child(2) {
+            transform: rotate(-30deg) translate(0,0);
+        }
+        &:hover .pay-card:nth-child(3) {
+            transform: rotate(-15deg) translate(0,0);
+        }
+        &:hover .pay-card:nth-child(4) {
+            transform: rotate(0deg) translate(0,0);
+        }
+        &:hover .pay-card:nth-child(5) {
+            transform: rotate(15deg) translate(0,0);
+        }
+        &:hover .pay-card:nth-child(6) {
+            transform: rotate(30deg) translate(0,0);
+        }
+        & .pay-card:hover {
+            z-index: 1;
+        }
+    }
+    &-card {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: .5s all ease;
+        transform-origin: bottom;
+        &:nth-child(1) {
+            transform: translate(0,0);
+        }
+        &:nth-child(2) {
+            transform: translate(2px,2px);
+        }
+        &:nth-child(3) {
+            transform: translate(4px,4px);
+        }
+        &:nth-child(4) {
+            transform: translate(6px,6px);
+        }
+        &:nth-child(5) {
+            transform: translate(8px,8px);
+        }
+        &:nth-child(6) {
+            transform: translate(10px,10px);
+        }
+    }
+    &-content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    &-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &-logo {
+        width: 55px;
+        margin-right: .90rem;
+    }
+    &-title-content {
+        font-size: var(--h2-font-size);
+        color: var(--color-text-title);
+        font-family: var(--heading-font);
+        &::first-letter {
+            color: var(--color-secondary);
+        }
+    }
+    &-description {
+        margin-top: 2rem;
+        font-size: 17px;
+        color: var(--color-text-paragraph);
+    }
+    &-alypay {
+        color: #fff;
+        background-color: var(--color-main);
+        border-radius: 5px;
+        padding: 8px 25px;
+        display: inline-block;
+        border: 1px solid var(--color-secondary);
+        margin-top: 2.7rem;
+        transition: color .2s ease-in-out;
+        &:hover {
+            background: var(--color-main-dark);
+            color: var(--color-secondary);
+            transition: all .2s ease-in-out;
+        }
+    }
+    @include responsive (875px) {
+        & {
+            grid-template-columns: 100%;
+            grid-row-gap: 1rem;
+        }
+        &-title {
+            font-size: 2.2rem;
+        }
+        &-description {
+            margin-top: 1rem;
+            text-align: center;
+        }
+        &-header {
+            justify-content: center;
+        }
+        &-alypay {
+            margin: 1rem;
+        }
+        &-align {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    @include responsive (708px) {
+        &-wrap {
+            width: 300px;
+            height: 200px;
+        }
+    }
+    @include responsive (502px) {
+        &-wrap  {
+            width: 250px;
+            height: 170px;
+        }
+        &-title {
+            font-size: 2rem; 
+        }
+    }
+    @include responsive (422px) {
+        &-wrap {
+            width: 200px;
+            height: 150px;
+            &:hover .pay-card:nth-child(1) {
+                transform: rotate(-25deg) translate(0,0);
+            }
+            &:hover .pay-card:nth-child(2) {
+                transform: rotate(-15deg) translate(0,0);
+            }
+            &:hover .pay-card:nth-child(3) {
+                transform: rotate(-5deg) translate(0,0);
+            }
+            &:hover .pay-card:nth-child(4) {
+                transform: rotate(5deg) translate(0,0);
+            }
+            &:hover .pay-card:nth-child(5) {
+                transform: rotate(12deg) translate(0,0);
+            }
+            &:hover .pay-card:nth-child(6) {
+                transform: rotate(20deg) translate(0,0);
+            }
+        }
+    }
+}

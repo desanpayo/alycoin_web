@@ -1,0 +1,125 @@
+.whitepaper {
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    grid-column-gap: 2rem; 
+    position: relative;
+    z-index: 2;
+    &-content {
+        padding: 2rem 1rem;
+        display: grid;
+        grid-template-rows: 10% 1fr 10%;
+        align-items: center;
+        justify-items: center;
+    }
+    &-image {
+        display: flex;
+        justify-content: flex-end;
+    }
+    &-title {
+        justify-self: start;
+        color: var(--color-text-title);
+        font-size: 3rem;
+        span {
+            display: inline-block;
+            font-family: var(--heading-font);
+            &::first-letter {
+                color: var(--color-secondary);
+            }
+        }
+    }
+    &-description {
+        color: var(--color-text-paragraph);
+        &:nth-child(2) {
+            margin-top: .80rem;
+        }
+    }
+    &-download {
+        justify-self: start;
+        color: #fff;
+        background-color: var(--color-main);
+        border-radius: 5px;
+        padding: 8px 25px;
+        display: inline-block;
+        border: 1px solid var(--color-secondary);
+        transition: color .2s ease-in-out;
+        margin-top: 1rem;
+        &:hover {
+            background: var(--color-main-dark);
+            color: var(--color-secondary);
+            transition: all .2s ease-in-out;
+        }
+        i {
+            color: var(--color-secondary);
+            margin-left: .60rem;
+        }
+    }
+    &-img {
+        width: 300px;
+        height: 350px;
+        background: url(../img/img-whitepaper-back.png) no-repeat center / cover;
+        position: relative;
+        perspective: 1000px;
+        &:hover .whitepaper-cover {
+            transform: rotateY(-180deg);
+            cursor: pointer;
+        }
+    }
+    &-cover {
+        position: absolute;
+        width: 260px;
+        height: 100%;
+        background: url(../img/img-whitepaper-front.png) no-repeat center / cover;
+        transform: rotateY(0deg);
+        transform-style: preserve-3d;
+        transform-origin: left;
+        transition: all .5s ease-in;
+        figure {
+            margin: 0;
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+    }
+    figure.whitepaper-front {
+        background: url(../img/img-whitepaper-front.png) no-repeat center / cover;
+    }
+    figure.whitepaper-back {
+        transform: rotateY(180deg)
+    }
+    @include responsive(1110px) {
+        & {
+            grid-template-columns: 100%;
+            grid-row-gap: 3rem; 
+            justify-items: center;
+        }
+        &-content {
+            text-align: center;
+        }
+        &-title {
+            justify-self: center;
+            font-size: 2.5rem;
+        }
+        &-download {
+            justify-self: center;
+        }
+    }
+    @include responsive(medium) {
+        &-content {
+            padding: 0;
+        }
+        &-img {
+            width: 240px;
+            height: 250px;
+        }
+        &-cover {
+            width: 220px;
+        }
+    }
+    @include responsive(320px) {
+        &-title {
+            font-size: 2rem;
+        }
+    }
+}

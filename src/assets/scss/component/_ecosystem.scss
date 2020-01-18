@@ -1,0 +1,91 @@
+.ecosystem {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    position: relative;
+    justify-items: center;
+    // height: 100%;
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &-title {
+        font-size: var(--h2-font-size);
+        color: var(--color-text-title);
+        span {
+            display: inline-block;
+            font-family: var(--heading-font);
+            &::first-letter {
+                color: var(--color-secondary);
+            }
+        }
+    }
+    &-description {
+        margin-top: .40rem;
+        color: var(--color-text-paragraph);
+    }
+    &-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 340px;
+        width: 100%;
+    }
+    &-img {
+        width: 340px;
+        position: absolute;
+        animation: rotate_eco 20s infinite linear;
+        @keyframes rotate_eco {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    }
+    &-moneda {
+        width: 100px;
+        position: relative;
+        z-index: var(--z-normal);
+    }
+    @include responsive (xlarge) {
+        &-img {
+            width: 300px;
+        }
+        &-moneda {
+            width: 90px;
+        }
+        & {
+            grid-template-columns: 100%;
+            grid-row-gap: 1rem;
+            text-align: center;
+        }
+    }
+    @include responsive (large) {
+        &-moneda {
+            width: 80px;
+        }
+        & {
+            grid-row-gap: .70rem;
+        }
+    }
+    @include responsive (medium) {
+        &-img {
+            width: 270px;
+        }
+        &-moneda {
+            width: 70px;
+        }
+        &-logo {
+            height: 270px;
+        }
+    }
+    @include responsive(500px) {
+        &-img {
+            width: 250px;
+        }
+        &-logo {
+            height: 250px;
+        }
+    }
+}
