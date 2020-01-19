@@ -5,8 +5,9 @@ import app_1 from '../../assets/img/img-app-1.jpeg';
 import app_2 from '../../assets/img/img-app-2.jpeg';
 import app_3 from '../../assets/img/img-app-3.jpeg';
 import app_4 from '../../assets/img/img-app-4.jpeg';
-import app_5 from '../../assets/img/img-app-5.jpeg';
-import app_6 from '../../assets/img/img-app-6.jpeg';
+import app_5 from '../../assets/img/img-app-5.png';
+import app_6 from '../../assets/img/img-app-6.png';
+import app_7 from '../../assets/img/img-app-7.png';
 import WOW from 'wowjs';
 
 class Carousel extends React.Component {
@@ -38,6 +39,9 @@ class Carousel extends React.Component {
                         </figure>
                         <figure className="carousel-images">
                             <img className="carousel-img" src={app_6} alt="AlyCoin proximamente"/>
+                        </figure>
+                        <figure className="carousel-images">
+                            <img className="carousel-img" src={app_7} alt="AlyCoin proximamente"/>
                         </figure>
                     </div>
                 </div> 

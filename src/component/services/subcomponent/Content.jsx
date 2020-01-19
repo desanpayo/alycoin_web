@@ -12,8 +12,17 @@ class Content extends React.Component {
         return (
             <div className="services-card wow bounceIn">
                 <div className="services-header">
-                    <div className="services-image"><img src={ this.props.img } alt="AlyCoin Aplicaciones" /></div>
-                    <p className="services-title">{ this.props.title }</p>
+                    {this.props.title === 'AlyConection' ? (
+                        <>
+                            <div className='services-image-alt'><img src={ this.props.img } alt="AlyCoin Aplicaciones" /></div>
+                            <p className="services-title-alt">{ this.props.title }</p>
+                        </>
+                    ) : (
+                        <>
+                            <div className="services-image"><img src={ this.props.img } alt="AlyCoin Aplicaciones" /></div>
+                            <p className="services-title">{ this.props.title }</p>
+                        </>
+                    )}
                 </div>
                 <div className="services-body">
                     <p className="services-description">{ this.props.description }</p>

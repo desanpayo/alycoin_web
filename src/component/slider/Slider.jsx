@@ -1,14 +1,14 @@
 import React from 'react';
 import alycoin from '../../assets/img/img-logo-2.png';
-import Particles from '../particles/Particle';
-import Fixedbar from '../fixebar/Fixebar';
-import { Link } from 'react-router-dom';
+import Fixedbar from '../fixebar/Fixebar'
+import slide_video from '../../assets/video/slide-video.mp4'
+import { Link } from 'react-router-dom'
 
 class Slider extends React.Component {
     render() {
         return (
             <div className="l-slider">
-                <Particles />
+                <video loop autoPlay src={slide_video} />
                 <div className="slider-content">
                     <div className="slider-info">
                         <h2 className="slider-title">Bienvenidos</h2>

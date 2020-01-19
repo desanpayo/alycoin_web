@@ -45,7 +45,7 @@ class Pay extends React.Component {
                             <img className="pay-logo" src={alypay} alt="Logo AlyPay"/>
                             <p className="pay-title-content"><span>A</span>lyPay</p>
                         </div>
-                        <div><p className="pay-description">Es la tarjeta de debido de <span>AlyCoin</span> con la que podras gastar tus criptomonedas en los comercios y cajeros de la red mastercard.</p></div>
+                        <div><p className="pay-description">La pasarela donde los usuarios podrán hacer transferencias y pagos 100% con criptomonedas a través de las aplicaciones de AlySystem.</p></div>
                         <div className="pay-align"><Link to="/alypay" className="pay-alypay">Ir a AlyPay</Link></div>
                     </div>
                 </div>

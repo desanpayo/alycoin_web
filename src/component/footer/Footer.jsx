@@ -33,7 +33,6 @@ const Footer = () => {
                 </div>
                 <div className="footer-copyright">
                     <p className="footer-foot">Derechos de <span>A</span>lySystem &copy;2018-2019 RUC: J0310000371555</p>
-                    <p className="footer-foot">No trabajamos ni realizamos ningun servicio en los Estados Unidos de America, Brasil, Canada, España, Mexico o los Emiratos Arabes Unidos.</p>
                 </div>
             </footer>
         </div>

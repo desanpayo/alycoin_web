@@ -57,6 +57,9 @@
         &:nth-child(6) {
             transform: rotateY(300deg) translateZ(300px);
         }
+        &:nth-child(7) {
+            transform: rotateY(360deg) translateZ(300px);
+        }
     }
     &-img {
         image-rendering: auto;
