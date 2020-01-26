@@ -74,7 +74,7 @@ export default [
     {
         "id": "8",
         "name": "Rolando Sanchez",
-        "cargo": "Desarrollador Backend",
+        "cargo": "Full Stack Developer",
         "img": img_8,
         "face": "https://www.facebook.com/developer.sanchez",
         "twitter": "",
@@ -83,9 +83,27 @@ export default [
     {
         "id": "9",
         "name": "Idsart Juarez",
-        "cargo": "Desarrollador Frontend",
+        "cargo": "Full Stack Developer",
         "img": img_8,
         "face": "https://www.facebook.com/IdsartAntonio",
+        "twitter": "",
+        "insta": ""
+    },
+    {
+        "id": "10",
+        "name": "Samuel Sobalvarro",
+        "cargo": "Full Stack Developer",
+        "img": img_8,
+        "face": "",
+        "twitter": "",
+        "insta": ""
+    },
+    {
+        "id": "11",
+        "name": "Jorge Potosme",
+        "cargo": "Full Stack Developer",
+        "img": img_8,
+        "face": "",
         "twitter": "",
         "insta": ""
     },

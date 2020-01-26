@@ -27,11 +27,7 @@ class Page extends React.Component {
                     </div>
                     <div className="page-resumen">
                         <h2 className="page-title">Resumen</h2>
-                        <p className="page-paragraph">Alycoin es un token independiente basado en Ethereum, que usa un sistema de garantía de contratos inteligentes.</p>
-                        <p className="page-paragraph">Hay una cantidad de 82,354,000 tokens listos para salir al mercado, junto con un Ecosistema de aplicaciones que le darán usabilidad y valor a la moneda.</p>
-                        <p className="page-paragraph">Alycoin asegura un transparente seguimiento a los inversores a través de la página web de la compañía donde podrán dar seguimiento constante de su inversión y uso en desarrollo de las tecnologías.</p>
-                        <p className="page-paragraph">Gracias a su Ecosistema de aplicaciones y sumado al crecimiento de la comunidad a nivel mundial, lograremos posicionar Alycoin como una moneda de gran usabilidad y demanda alcanzando altos valores sostenibles.</p>
-                        <p className="page-paragraph">La fase ICO se realizará en un período de tiempo correspondiente a un año iniciando el 24 de Diciembre 2018 y finalizando el 24 de Diciembre 2019.</p>
+                        <p className="page-paragraph">AlyCoin es la moneda de la AlySystem. Basado en Ethereum, usa un sistema de garantía de contratos inteligentes. Hay una cantidad de 82,354,000 tokens listos para salir al mercado, junto con un ecosistema de aplicaciones que le darán usabilidad y valor a la moneda.</p>
                         <Content />
                         <h2 className="page-title">Aclaraciones</h2>
                         <p className="page-paragraph">Este documento es sólo para fines informativos y no constituye ningún derecho legal entre usted y <span>Alycoin (ALY)</span>. Este documento técnico es un trabajo que está sujeto a revisión y modificaciones.</p>
@@ -50,25 +46,26 @@ class Page extends React.Component {
                         <p className="page-paragraph">Como parte del Ecosistema tendremos Ejecutivos que son los principales en la distribución de Alycoin en la fase ICO. Este y todos los productos de nuestro Ecosistema es parte de nuestra Estrategia.</p>
                         <p className="page-paragraph">Al finalizar la fase ICO se pretende que Alycoin se encuentre en varios Exchanges tales como: Binance, Bittrex, Bithumb, Huobi, OKex, Upbit, HitBTC, Bit-Z, EXX, Gate.io, BigONE, Livecoin, Yobit y Cobinhood.</p>
                         <h4 className="page-subtitle-description">Productos del ecosistema de <span>AlyCoin</span></h4>
-                        <h5 className="page-title--ben">AlyExecutive</h5>
-                        <p className="page-paragraph">Es el equipo de ejecutivos encargados de distribuir por el mundo los paquetes de monedas Alycoin y formar la comunidad internacional que le dará valor a la misma. Se repartirá un 26% de las ventas directas de los paquetes de Alycoin en cuatro niveles en la fase ICO.</p>
-                        <h6 className="page-title--ben">AlyWallet</h6>
-                        <p className="page-paragraph">Es una billetera virtual de alta seguridad donde podrás guardar no solo tus monedas  de ALY si no también las principales monedas del mercado que a su vez podrás intercambiar entre ellas.</p>
-                        <h6 className="page-title--ben">AlySocial</h6>
-                        <p className="page-paragraph">Es una red social descentralizada donde podrás compartir tus contenidos originales y ganar por ellos, pretendemos ser la más grande comunidad conectada del mundo.</p>
-                        <h6 className="page-title--ben">AlyShopping</h6>
-                        <p className="page-paragraph">Es aplicación que te abrirá el mundo de las compras, ubicándote los comercios más cercanos donde puedes pagar con Alycoin y ganar puntos promocionales que podrás utilizar en la red de comercios afiliados.</p>
+                        <h5 className="page-title--ben">AlyCoin</h5>
+                        <p className="page-paragraph">Es la moneda de AlySystem, actualmente basada en un token ERC20 de Ethereum, con el desarrollo del blockchain propio de la compañía, Aly se pretende migrar la misma a este comenzando una nueva fase en su desarrollo.</p>
+                        <h6 className="page-title--ben">AlyConnection</h6>
+                        <p className="page-paragraph">Se trata de unificar a todos los servicios de recargas móviles en una sola plataforma, donde las criptomonedas serán aceptadas como una de las formas de pago.</p>
+                        <h6 className="page-title--ben">AlyPay</h6>
+                        <p className="page-paragraph">La pasarela donde los usuarios podrán hacer transferencias y pagos 100% con criptomonedas a través de las aplicaciones de AlySystem.</p>
+                        <h6 className="page-title--ben">AlyExchange</h6>
+                        <p className="page-paragraph">AlyExchange constituye una plataforma de intercambio de divisas a través de criptomonedas. Nuestro software permitirá a los inversores realizar operaciones justas y ordenadas, monitorear cuentas de criptoactivos y difundir eficientemente la información de precios para cualquier negociación de valores a través de intermediarios financieros. Esta aplicación contará con las más recientes tecnologías de desarrollo de inteligencia artificial y blockchain, Aly; de la empresa AlySystem.</p>
                         <h6 className="page-title--ben">AlySkiper</h6>
-                        <p className="page-paragraph">Es la aplicación de servicios de encomiendas express y taxi personalizado en la que podrás utilizar tus criptomonedas AlyCoin, Dash, Ethereum, Litecoin y Bitcoin como forma de pago uniendo restaurantes, comercios y transporte en un solo click desde tu dispositivo móvil.</p>
+                        <p className="page-paragraph">La aplicación vanguardia de AlySystem, el marketplace que integra a la oferta y la demanda de la cotidianidad en un solo toque de cualquier dispositivo móvil. Podrá usar Alycoin las principales criptomonedas de del mercado a través de esta app.</p>
                         <h6 className="page-title--ben">CupON</h6>
-                        <p className="page-paragraph">Es la universidad en línea donde podrás aprender de forma gratuita todo sobre el mundo del trading de criptomonedas y convertirte en un profesional en esta industria,  también Alycoin dará capital a las personas graduadas para que se incorporen en el mercado del trading y puedan capitalizar ya que compartirá un 3% de las ganancias diarias obtenidas por el trading.</p>
+                        <p className="page-paragraph">La universidad de criptomonedas que pretende extender a las masas la cultura de esta nueva forma de pago, asi como sus posibles aplicaciones, ya sea en mercados de trading o en la vida diaria.</p>
                         <h6 className="page-title--ben">AlyPay</h6>
                         <p className="page-paragraph">Es la tarjeta de débito de alycoin con la que podrás gastar tus criptomonedas en los comercios y cajeros de la red de mastercard.</p>
-                        <h6 className="page-subtitle-description">Beneficios del ecosistema</h6>
-                        <h6 className="page-title--ben">AlyTravel</h6>
-                        <p className="page-paragraph">Siendo parte de AlyExecutive podrás participar en los viajes que se realizarán durante la fase ICO, una vez por mes a los destinos ya establecidos (pueden ser modificados) por la compañía, cumpliendo una meta de ventas mensuales. </p>
+                        <h6 className="page-title--ben">Aly</h6>
+                        <p className="page-paragraph">Aly es la inteligencia artificial de AlySystem, creada como un blockchain; con la capacidad de desarrollar contratos inteligentes. A través de la expansión de la cadena de bloques Aly tiene la capacidad de convertir sus contratos inteligentes en una nueva inteligencia artificial.</p>
                         <h6 className="page-title--ben">AlyFundation</h6>
-                        <p className="page-paragraph">Es la fundación de ayuda social, para la cual se destinará el 10% de las utilidades de la compañía, siendo utilizado dicho capital para proyectos de bien social y ayuda comunitaria a nivel internacional.</p>
+                        <p className="page-paragraph">La fundación de ayuda social con la que se pretende financiar emprendimientos comunitarios y de bien social a nivel internacional.</p>
+                        <h6 className="page-title--ben">AlyTravel</h6>
+                        <p className="page-paragraph">Un marketplace que permitirá a los usuarios realizar reservaciones en hospedajes, hoteles y vuelos.</p>
 
                         <h6 className="page-team-title margin-top">Equipo <div>Aly<span>Coin</span></div></h6>
                         <div className="page-team-main margin-top">

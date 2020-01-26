@@ -26,8 +26,8 @@ class Video extends React.Component {
                     <div className="video-content">
                         <h2 className="video-title wow rollIn"><div>Aly<span>Skiper</span></div> Cuenta conmigo</h2>
                         <div className="video-public">
-                            <a className="video-content-img" target='_blank' rel="opener" href="https://play.google.com/store/apps/details?id=com.alyskiperuser&hl=es_NI" rel="opener"><img src={playstore} alt=""/></a>
-                            <a className="video-content-img" href="#" rel="opener"><img src={appstore} alt=""/></a>
+                            <a className="video-content-img" target='_blank' rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.alyskiperuser&hl=es_NI" rel="opener"><img src={playstore} alt=""/></a>
+                            <a className="video-content-img" href="#"><img src={appstore} alt=""/></a>
                         </div>
                     </div>
                     <div className="video-modal">

@@ -167,7 +167,7 @@
     &-team-main {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 230px);
+        grid-template-rows: repeat(4, 230px);
         grid-gap: 1rem;
         justify-content: center;
         justify-items: start;
@@ -175,7 +175,7 @@
     @include responsive(1200px) {
         &-team-main {
             grid-template-columns: repeat(2, 50%);
-            grid-template-rows: repeat(5, 1fr);
+            grid-template-rows: repeat(8, 1fr);
             grid-row-gap: 2rem;
         }
     }
@@ -191,7 +191,7 @@
     @include responsive(780px) {
         &-team-main {
             grid-template-columns: 100%;
-            grid-template-rows: repeat(9, 1fr);
+            grid-template-rows: repeat(11, 1fr);
         }
     }
     @include responsive(medium) {
