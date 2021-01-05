@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@y0c/react-datepicker": "^0.3.7",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "hashids": "^1.2.2",
     "jwt-decode": "^2.2.0",
     "qrcode.react": "^0.9.3",
